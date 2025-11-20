@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snackbar</title>
-  <script type="module" crossorigin src="/hw-test/4-snackbar.js"></script>
+    <title>Search Image</title>
+  <script type="module" crossorigin src="/hw-test/5-searchImage.js"></script>
   <link rel="modulepreload" crossorigin href="/hw-test/assets/modulepreload-polyfill-B5Qt9EMX.js">
   <link rel="modulepreload" crossorigin href="/hw-test/assets/vendor-Bz7jjc0t.js">
   <link rel="stylesheet" crossorigin href="/hw-test/assets/vendor-B-fgzGcT.css">
@@ -18,32 +18,24 @@
     <main>
         <div class="container">
             <h1 class="main-title">
-                Snackbar
+                Search
             </h1>
             <a class="back-link" href="./index.html">Go back</a>
         </div>
-
         <form class="form">
             <label>
-                Delay (ms)
-                <input type="number" name="delay" required />
+                <input type="text" name="search-text" placeholder="Search images...">
             </label>
-        
-            <fieldset>
-                <legend>State</legend>
-                <label>
-                    <input type="radio" name="state" value="fulfilled" required/>
-                    Fulfilled
-                </label>
-                <label>
-                    <input type="radio" name="state" value="rejected" required />
-                    Rejected
-                </label>
-            </fieldset>
-        
-            <button type="submit" class="js-create-notification-btn">Create notification</button>
+            <button type="submit">Search</button>
         </form>
 
+        <div class="loader-container is-hidden">
+            <div class="loader"></div>
+        </div>
+        
+        <div class="container">
+            <ul class="gallery"></ul>
+        </div>
     </main>
 </body>
 
